@@ -1,5 +1,5 @@
 {
-  "name": "kartik-v/yii2-widget-switchinput",
+  "name": "bogdik/yii2-widget-switchinput",
   "description": "A Yii2 wrapper widget for the Bootstrap Switch plugin to use checkboxes & radios as toggle switchinputes (sub repo split from yii2-widgets)",
   "keywords": [
     "yii2",
@@ -13,7 +13,7 @@
     "jquery",
     "plugin"
   ],
-  "homepage": "https://github.com/kartik-v/yii2-widget-switchinput",
+  "homepage": "https://github.com/bogdik/yii2-widget-switchinput",
   "type": "yii2-extension",
   "license": "BSD 3-Clause",
   "authors": [
@@ -29,7 +29,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "kartik\\switchinput\\": ""
+      "bogdik\\switchinput\\": ""
     }
   }
 }

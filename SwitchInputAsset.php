@@ -7,9 +7,9 @@
  * @version 1.3.1
  */
 
-namespace kartik\switchinput;
+namespace bogdik\switchinput;
 
-use kartik\base\AssetBundle;
+use yii\web\AssetBundle;
 
 /**
  * Asset bundle for Switch Widget
@@ -24,9 +24,14 @@ class SwitchInputAsset extends AssetBundle
      */
     public function init()
     {
-        $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/bootstrap-switch', 'css/bootstrap-switch-kv']);
-        $this->setupAssets('js', ['js/bootstrap-switch']);
+        $this->sourcePath= __DIR__ . '/assets';
+        $this->css        = [
+            YII_ENV_DEV ? 'css/bootstrap-switch.css' : 'css/bootstrap-switch.min.css',
+            YII_ENV_DEV ? 'css/bootstrap-switch-kv.css' : 'css/css/bootstrap-switch-kv.min.css',
+        ];
+        $this->js         = [
+            YII_ENV_DEV ? 'js/bootstrap-switch.js' : 'js/bootstrap-switch.min.js',
+        ];
         parent::init();
     }
 }

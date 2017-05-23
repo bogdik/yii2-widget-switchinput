@@ -1,11 +1,11 @@
 yii2-widget-switchinput
 =======================
 
-[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-switchinput)
-[![License](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/license)](https://packagist.org/packages/kartik-v/yii2-widget-switchinput)
-[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/downloads)](https://packagist.org/packages/kartik-v/yii2-widget-switchinput)
-[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/d/monthly)](https://packagist.org/packages/kartik-v/yii2-widget-switchinput)
-[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/d/daily)](https://packagist.org/packages/kartik-v/yii2-widget-switchinput)
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/v/stable)](https://packagist.org/packages/bogdik/yii2-widget-switchinput)
+[![License](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/license)](https://packagist.org/packages/bogdik/yii2-widget-switchinput)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/downloads)](https://packagist.org/packages/bogdik/yii2-widget-switchinput)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/d/monthly)](https://packagist.org/packages/bogdik/yii2-widget-switchinput)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widget-switchinput/d/daily)](https://packagist.org/packages/bogdik/yii2-widget-switchinput)
 
 The SwitchInput widget turns checkboxes and radio buttons into toggle switchinputes. The plugin is a wrapper for the [Bootstrap Switch Plugin](http://www.bootstrap-switch.org) and is specially styled for Bootstrap 3.
 
@@ -18,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer.phar require kartik-v/yii2-widget-switchinput "*"
+$ php composer.phar require bogdik/yii2-widget-switchinput "*"
 ```
 
 or add
 
 ```
-"kartik-v/yii2-widget-switchinput": "*"
+"bogdik/yii2-widget-switchinput": "*"
 ```
 
 to the ```require``` section of your `composer.json` file.
@@ -40,7 +40,7 @@ You can refer detailed [documentation and demos](http://demos.krajee.com/widget-
 ## Usage
 
 ```php
-use kartik\switchinput\SwitchInput;
+use bogdik\switchinput\SwitchInput;
 
 // Usage with ActiveForm and model
 echo $form->field($model, 'status')->widget(SwitchInput::classname(), [
@@ -53,6 +53,17 @@ echo SwitchInput::widget([
     'name' => 'status_1',
     'type' => SwitchInput::RADIO
 ]);
+```
+If you use RenderAjax just use static widths. Example:
+
+```php
+echo $form->field($model, 'status')->widget(SwitchInput::classname(), [
+    'type' => SwitchInput::CHECKBOX,
+    'handleWidth'=>'53',
+    'labelWidth'=>'77',
+    'staticWidth'=>'53',
+]);
+
 ```
 
 ## License

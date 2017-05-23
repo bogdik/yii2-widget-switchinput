@@ -7,7 +7,7 @@
  * @version 1.3.1
  */
 
-namespace kartik\switchinput;
+namespace bogdik\switchinput;
 
 use Yii;
 use yii\helpers\Html;

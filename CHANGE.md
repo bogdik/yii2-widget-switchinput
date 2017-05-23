@@ -1,5 +1,15 @@
 Change Log: `yii2-widget-switchinput`
 =====================================
+## Version 1.3.2
+
+**Date:** 23-May-2017
+
+- (bug #17): Correct width issue.
+- (bug #25): Correct Correct width issue in RenderAjax
+- Add `pluginOptions['handleWidth']` initialization.
+- Add `pluginOptions['labelWidth']` initialization.
+- Add `pluginOptions['staticWidth']` initialization.
+- Update to latest release of switch input plugin.
 
 ## Version 1.3.1
 
