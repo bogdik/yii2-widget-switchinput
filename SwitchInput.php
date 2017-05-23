@@ -38,6 +38,20 @@ class SwitchInput extends InputWidget
      *     `false`.
      */
     public $tristate = false;
+    /**
+     * @var string width handle to render buttons. Default `auto`
+     */
+    public $handleWidth = 'auto';
+
+    /**
+     * @var string width label to render buttons. Default `auto`
+     */
+    public $labelWidth = 'auto';
+
+    /**
+     * @var string width label to render buttons. Default `auto`
+     */
+    public $staticWidth = 'auto';
 
     /**
      * @var string|int the value for indeterminate state when `tristate` is true and type is `SwitchInput::CHECKBOX`.
@@ -182,6 +196,9 @@ class SwitchInput extends InputWidget
         $ind = $this->indeterminateValue;
         $this->pluginOptions['indeterminate'] = $this->tristate && $this->value === $ind && $this->type !== self::RADIO;
         $this->pluginOptions['disabled'] = $this->disabled;
+        $this->pluginOptions['handleWidth'] = $this->handleWidth;
+        $this->pluginOptions['labelWidth'] = $this->labelWidth;
+        $this->pluginOptions['staticWidth'] = $this->staticWidth;
         $this->pluginOptions['readonly'] = $this->readonly;
         $id = $this->type == self::RADIO ? 'jQuery("[name = \'' . $this->name . '\']")' :
             'jQuery("#' . $this->options['id'] . '")';
